@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>  
+<beans  
+    xmlns="http://www.springframework.org/schema/beans"  
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"  
+    xmlns:p="http://www.springframework.org/schema/p"  
+    xsi:schemaLocation="http://www.springframework.org/schema/beans  
+               http://www.springframework.org/schema/beans/spring-beans-3.0.xsd">
+
+<bean id="add" class="model.Address">
+     <property name="plotNo" value="159"></property>
+     <property name="area" value="Friends Colony"></property>
+ <!-- <constructor-arg value="159" type="int"></constructor-arg>
+<constructor-arg value="bhande plot" ></constructor-arg>-->
+    
+    
+  </bean>  
+
+  <bean id="add3" class="model.Address">
+    <property name="plotNo" value="156"></property>
+     <property name="area" value="Friends Colony"></property>
+</bean>     
+    
+    
+<bean id="obj" class="model.Student" autowire="byName">
+    
+ <!--    <constructor-arg value="101" type="int"></constructor-arg>
+    <constructor-arg value="geeta" ></constructor-arg>  --> 
+    
+    <property name="roll" value="456"></property>
+    <property name="name" value="geeta"></property> 
+     <property name="add" ref="add3"></property> 
+</bean>
+
+
+
+</beans>
